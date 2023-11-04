@@ -1,13 +1,13 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const AddCoffee = () => {
+const UpdateCoffee = () => {
     return (
         <div>
             <Link to='/'>
                 <button className="btn text-2xl font-rancho mx-4 my-3"><FaArrowLeft></FaArrowLeft>Back To Home</button></Link>
             <div className="my-16 bg-[#F4F3F0]">
-                <h3 className="text-6xl font-rancho text-black my-7 mb-7 text-center font-semibold">Add New Coffee</h3>
+                <h3 className="text-6xl font-rancho text-black my-7 mb-7 text-center font-semibold">Update Coffee :</h3>
                 <p className="text-lg font-raleway text-center text-slate-500 my-9 mx-5 md:mx-16 lg:mx-56">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
 
                 <div className=" mx-12 lg:mx-40">
@@ -95,7 +95,7 @@ const AddCoffee = () => {
 
                     </form>
 
-                    <button className="btn btn-block bg-[#D2B48C] hover:bg-[#be9d74] border-black border solid font-rancho text-xl my-10">Add Coffee</button>
+                    <button className="btn btn-block bg-[#D2B48C] hover:bg-[#be9d74] border-black border solid font-rancho text-xl my-10">Update Coffee</button>
 
                 </div>
 
@@ -104,4 +104,4 @@ const AddCoffee = () => {
     );
 };
 
-export default AddCoffee;
+export default UpdateCoffee;
