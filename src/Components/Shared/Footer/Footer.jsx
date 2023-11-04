@@ -2,8 +2,8 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaTwitter } from 'react-i
 const Footer = () => {
     return (
         <div>
-            <footer className="footer grid grid-cols-1 md:grid-cols-2 my-6">
-                <div className="mx-20">
+            <footer className="footer grid grid-cols-1  md:grid-cols-2 my-6">
+                <div className="mx-12">
                     <img className="w-16 h-16" src="https://i.ibb.co/tB4RvHX/logo1.png" alt="" />
                     <h3 className="text-6xl font-rancho text-[#331A15] mt-3 font-semibold">Coffee Shop</h3>
                     <p className=" text-base font-raleway text-black my-8">Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
