@@ -1,7 +1,40 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AddCoffee = () => {
+    const handleAddCoffee = e => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const chef = form.chef.value;
+        const price = form.price.value;
+        const taste = form.taste.value;
+        const category = form.category.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+
+        const newCoffee = { name, chef, price, taste, category, details, photo }
+
+        console.log(newCoffee);
+
+
+        // Sending data to server
+        fetch('http://localhost:5000/coffee', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(newCoffee)
+        })
+            .then(res => res.json)
+            .then(data => {
+                console.log(data);
+                Swal.fire('New Coffee added Successfully!')
+                form.reset();
+            })
+
+    }
     return (
         <div>
             <Link to='/'>
@@ -11,7 +44,7 @@ const AddCoffee = () => {
                 <p className="text-lg font-raleway text-center text-slate-500 my-9 mx-5 md:mx-16 lg:mx-56">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
 
                 <div className=" mx-12 lg:mx-40">
-                    <form>
+                    <form onSubmit={handleAddCoffee}>
                         {/* name and chef */}
                         <div className="md:flex gap-10 my-3">
                             <div className="form-control md:w-1/2 my-2">
@@ -19,7 +52,7 @@ const AddCoffee = () => {
                                     <span className="label-text text-xl font-raleway  font-bold">Name</span>
                                 </label>
                                 <label className="input-group">
-                                    <input type="text" name="name" placeholder="Coffee Name" className="input input-bordered w-full" />
+                                    <input type="text" name="name" placeholder="Coffee Name" className="input input-bordered w-full" required />
                                 </label>
                             </div>
 
@@ -33,7 +66,7 @@ const AddCoffee = () => {
                             </div>
                         </div>
 
-                        {/* Supplier and taste */}
+                        {/* price and taste */}
 
                         <div className="md:flex gap-10 my-3">
                             <div className="form-control md:w-1/2 my-2">
@@ -41,7 +74,7 @@ const AddCoffee = () => {
                                     <span className="label-text text-xl font-raleway  font-bold">Price</span>
                                 </label>
                                 <label className="input-group">
-                                    <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
+                                    <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" required />
                                 </label>
                             </div>
 
@@ -85,17 +118,16 @@ const AddCoffee = () => {
                                     <span className="label-text text-xl font-raleway  font-bold">Photo URL</span>
                                 </label>
                                 <label className="input-group">
-                                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
+                                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" required/>
                                 </label>
                             </div>
 
                         </div>
 
-
+                        <button className="btn btn-block bg-[#D2B48C] hover:bg-[#be9d74] border-black border solid font-rancho text-xl my-10">Add Coffee</button>
 
                     </form>
 
-                    <button className="btn btn-block bg-[#D2B48C] hover:bg-[#be9d74] border-black border solid font-rancho text-xl my-10">Add Coffee</button>
 
                 </div>
 
