@@ -1,7 +1,9 @@
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const UpdateCoffee = () => {
+    const coffeeData = useLoaderData();
+    console.log(coffeeData);
     return (
         <div>
             <Link to='/'>

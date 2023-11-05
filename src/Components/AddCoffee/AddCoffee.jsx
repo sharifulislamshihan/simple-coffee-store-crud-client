@@ -27,10 +27,12 @@ const AddCoffee = () => {
             },
             body: JSON.stringify(newCoffee)
         })
-            .then(res => res.json)
+            .then(res => res.json())
             .then(data => {
                 console.log(data);
-                Swal.fire('New Coffee added Successfully!')
+                if(data.insertedId){
+                    Swal.fire('New Coffee added Successfully!')
+                }
                 form.reset();
             })
 
