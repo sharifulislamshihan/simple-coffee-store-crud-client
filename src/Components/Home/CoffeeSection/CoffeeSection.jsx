@@ -1,11 +1,13 @@
 import { FaCoffee } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import CoffeeCart from "./CoffeeCart";
+import { useState } from "react";
 
 
 const CoffeeSection = () => {
 
     const coffeeData = useLoaderData();
+    const [coffees, setCoffees] = useState(coffeeData);
     console.log(coffeeData);
     return (
         <div className="my-24">
@@ -19,9 +21,14 @@ const CoffeeSection = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 mx-5 md:mx-40 gap-7 mt-14">
                 {
-                    coffeeData.map(coffee => <CoffeeCart
+                    coffees.map(coffee => <CoffeeCart
                         key={coffee._id}
-                        coffee={coffee}></CoffeeCart>)
+                        coffee={coffee}
+                        coffees = {coffees}
+                        setCoffees ={setCoffees}
+                        >
+
+                        </CoffeeCart>)
                 }
             </div>
         </div>
