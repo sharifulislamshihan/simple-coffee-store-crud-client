@@ -9,7 +9,7 @@ const ViewCoffee = () => {
                 <button className="btn text-2xl font-rancho mx-4 my-3"><FaArrowLeft></FaArrowLeft>Back To Home</button>
             </Link>
             <div className=" md:flex justify-center gap-20 my-24">
-                <img className="h-72 mx-auto" src={coffeeData?.photo} alt="" />
+                <img className="h-72 mx-auto md:mx-0" src={coffeeData?.photo} alt="" />
                 <div className="space-y-7 text-center">
                     <h3 className="text-6xl font-rancho font-semibold text-[#331A15]">Niceties</h3>
                     <div className="space-y-2">

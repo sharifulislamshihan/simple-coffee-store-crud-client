@@ -9,6 +9,6 @@ import Routes from './Components/Routes/Routes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={Routes} />
+      <RouterProvider router={Routes} />
   </React.StrictMode>,
 )
