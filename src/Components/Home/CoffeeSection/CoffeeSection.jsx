@@ -8,6 +8,7 @@ const CoffeeSection = () => {
 
     const coffeeData = useLoaderData();
     const [coffees, setCoffees] = useState(coffeeData);
+    
     console.log(coffeeData);
     return (
         <div className="my-24">

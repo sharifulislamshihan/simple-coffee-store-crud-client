@@ -20,7 +20,7 @@ const AddCoffee = () => {
 
 
         // Sending data to server
-        fetch('http://localhost:5000/coffee', {
+        fetch('https://simple-coffee-store-crud-server.vercel.app/coffee', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
