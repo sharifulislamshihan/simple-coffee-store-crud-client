@@ -1,8 +1,8 @@
-# React + Vite
+# CRUD Operation Porjects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a coffee store project that container crud operation
 
-Currently, two official plugins are available:
+Live link and server side code link below
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Live Link](https://jazzy-stroopwafel-2fd6a5.netlify.app/)
+-  [Backend Code Link](https://github.com/sharifulislamshihan/simple-coffee-store-crud-server)
