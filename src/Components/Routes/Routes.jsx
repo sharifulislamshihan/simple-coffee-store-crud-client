@@ -6,6 +6,7 @@ import UpdateCoffee from "../UpdateCoffee/UpdateCoffee";
 import ViewCoffee from "../ViewCoffee/ViewCoffee";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import ErrorPage from "../404ErrorPage/ErrorPage";
 
 
 const Routes = createBrowserRouter([
@@ -39,6 +40,10 @@ const Routes = createBrowserRouter([
             {
                 path:'/register',
                 element: <Register></Register>,
+            },
+            {
+                path: '*',
+                element:<ErrorPage></ErrorPage>
             },
         ]
     },
